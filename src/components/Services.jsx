@@ -41,16 +41,16 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-cream py-24 sm:py-28">
+    <section id="services" className="relative bg-night py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
             What We Do
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
             Two specialties. One spotless standard.
           </h2>
-          <p className="mt-4 text-lg text-stone">
+          <p className="mt-4 text-lg text-fog">
             We don&apos;t do everything — we do these two things exceptionally
             well.
           </p>
@@ -59,32 +59,32 @@ export default function Services() {
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={i * 0.1}>
-              <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white transition-shadow duration-300 hover:shadow-xl hover:shadow-charcoal/5">
+              <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-edge bg-card transition-all duration-300 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-900/20">
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-full bg-cream text-teal-600 shadow-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-paper shadow-[0_0_18px_-2px_var(--color-blue-500)]">
                     <service.icon size={20} />
                   </div>
                 </div>
 
                 <div className="flex flex-1 flex-col p-8">
-                  <h3 className="font-display text-2xl font-bold text-charcoal">
+                  <h3 className="font-display text-2xl font-bold text-paper">
                     {service.title}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-teal-600">
+                  <p className="mt-1 text-sm font-medium text-blue-400">
                     {service.tagline}
                   </p>
-                  <p className="mt-4 text-stone">{service.description}</p>
+                  <p className="mt-4 text-fog">{service.description}</p>
 
                   <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                     {service.bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-2 text-sm text-charcoal/80">
-                        <Check size={16} className="mt-0.5 shrink-0 text-teal-500" />
+                      <li key={bullet} className="flex items-start gap-2 text-sm text-paper/80">
+                        <Check size={16} className="mt-0.5 shrink-0 text-blue-400" />
                         {bullet}
                       </li>
                     ))}

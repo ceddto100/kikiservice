@@ -25,13 +25,13 @@ export default function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-cream/90 backdrop-blur-md shadow-sm shadow-charcoal/5'
+          ? 'glass border-b border-edge shadow-lg shadow-black/40'
           : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-charcoal">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-500 text-cream">
+        <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-paper">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-paper shadow-[0_0_18px_-2px_var(--color-blue-500)]">
             <Sparkles size={16} />
           </span>
           Kiki&apos;s Cleanup
@@ -42,7 +42,7 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-stone transition-colors hover:text-teal-600"
+              className="text-sm font-medium text-fog transition-colors hover:text-blue-300"
             >
               {link.label}
             </a>
@@ -56,7 +56,7 @@ export default function Nav() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="text-charcoal md:hidden"
+          className="text-paper md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -64,14 +64,14 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-line bg-cream px-5 pb-6 md:hidden">
+        <div className="border-t border-edge bg-ink px-5 pb-6 md:hidden">
           <div className="flex flex-col gap-4 pt-4">
             {LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-stone hover:text-teal-600"
+                className="text-sm font-medium text-fog hover:text-blue-300"
               >
                 {link.label}
               </a>

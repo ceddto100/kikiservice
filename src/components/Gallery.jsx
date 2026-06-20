@@ -20,16 +20,16 @@ const ITEMS = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="bg-cream py-24 sm:py-28">
+    <section id="gallery" className="bg-ink py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
             See The Difference
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
             Before &amp; after
           </h2>
-          <p className="mt-4 text-lg text-stone">
+          <p className="mt-4 text-lg text-fog">
             A few real(ish) snapshots of spaces we&apos;ve brought back to
             life.
           </p>
@@ -38,15 +38,15 @@ export default function Gallery() {
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (
             <Reveal key={item.label} delay={i * 0.1}>
-              <div className="overflow-hidden rounded-2xl border border-line bg-white">
+              <div className="group overflow-hidden rounded-2xl border border-edge bg-card transition-colors duration-300 hover:border-blue-400/40">
                 <div className="grid grid-cols-2">
                   <div className="relative aspect-square overflow-hidden">
                     <img
                       src={item.before}
                       alt={`${item.label} before cleaning`}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                     />
-                    <span className="absolute left-2 top-2 rounded-full bg-charcoal/80 px-2.5 py-1 text-xs font-semibold text-cream">
+                    <span className="absolute left-2 top-2 rounded-full bg-black/70 px-2.5 py-1 text-xs font-semibold text-paper">
                       Before
                     </span>
                   </div>
@@ -56,12 +56,12 @@ export default function Gallery() {
                       alt={`${item.label} after cleaning`}
                       className="h-full w-full object-cover"
                     />
-                    <span className="absolute left-2 top-2 rounded-full bg-teal-500 px-2.5 py-1 text-xs font-semibold text-cream">
+                    <span className="absolute left-2 top-2 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 px-2.5 py-1 text-xs font-semibold text-paper shadow-[0_0_14px_-2px_var(--color-blue-500)]">
                       After
                     </span>
                   </div>
                 </div>
-                <p className="px-5 py-4 text-sm font-semibold text-charcoal">
+                <p className="px-5 py-4 text-sm font-semibold text-paper">
                   {item.label}
                 </p>
               </div>
