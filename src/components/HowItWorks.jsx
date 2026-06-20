@@ -30,16 +30,19 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-teal-900 py-24 text-cream sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="how-it-works" className="relative overflow-hidden bg-gradient-to-b from-ink via-blue-900/30 to-ink py-24 text-paper sm:py-28">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
+      <div className="drift pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-500/15 blur-3xl" />
+
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-300">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-300">
             How It Works
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Four steps to a spotless space
           </h2>
-          <p className="mt-4 text-lg text-teal-100/80">
+          <p className="mt-4 text-lg text-fog">
             No guesswork, no hidden fees — just a simple process that gets you
             back to normal fast.
           </p>
@@ -48,22 +51,22 @@ export default function HowItWorks() {
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <Reveal key={step.title} delay={i * 0.1} className="relative">
-              <div className="flex h-full flex-col rounded-2xl border border-cream/10 bg-cream/5 p-6">
-                <span className="font-display text-sm font-bold text-teal-300">
+              <div className="flex h-full flex-col rounded-2xl border border-edge bg-card/60 p-6 transition-colors duration-300 hover:border-blue-400/40">
+                <span className="font-display text-sm font-bold text-blue-300">
                   0{i + 1}
                 </span>
-                <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cream/10 text-teal-300">
+                <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/15 text-blue-300">
                   <step.icon size={22} />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-bold">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-teal-100/75">
+                <p className="mt-2 text-sm leading-relaxed text-fog">
                   {step.description}
                 </p>
               </div>
               {i < STEPS.length - 1 && (
-                <div className="absolute top-1/2 -right-4 hidden h-px w-8 bg-cream/15 lg:block" />
+                <div className="absolute top-1/2 -right-4 hidden h-px w-8 bg-blue-400/30 lg:block" />
               )}
             </Reveal>
           ))}

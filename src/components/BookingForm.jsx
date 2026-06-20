@@ -27,23 +27,24 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="book" className="bg-cream py-24 sm:py-28">
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
+    <section id="book" className="relative overflow-hidden bg-night py-24 sm:py-28">
+      <div className="drift pointer-events-none absolute -bottom-20 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl" />
+      <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
             Book Your Cleanup
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
             Let&apos;s get your space sorted
           </h2>
-          <p className="mt-4 text-lg text-stone">
+          <p className="mt-4 text-lg text-fog">
             Fill out the details below and we&apos;ll follow up with a quote
             within the hour.
           </p>
         </Reveal>
 
         <Reveal delay={0.1} className="mt-12">
-          <div className="rounded-3xl border border-line bg-white p-6 sm:p-10">
+          <div className="rounded-3xl border border-edge bg-card p-6 shadow-2xl shadow-blue-900/10 sm:p-10">
             <AnimatePresence mode="wait">
               {submitted ? (
                 <motion.div
@@ -53,11 +54,11 @@ export default function BookingForm() {
                   exit={{ opacity: 0 }}
                   className="flex flex-col items-center py-10 text-center"
                 >
-                  <CheckCircle2 size={48} className="text-teal-500" />
-                  <h3 className="mt-4 font-display text-2xl font-bold text-charcoal">
+                  <CheckCircle2 size={48} className="text-blue-400" />
+                  <h3 className="mt-4 font-display text-2xl font-bold text-paper">
                     Request received!
                   </h3>
-                  <p className="mt-2 max-w-sm text-stone">
+                  <p className="mt-2 max-w-sm text-fog">
                     Thanks, {form.name.split(' ')[0] || 'there'}. We&apos;ll
                     email you a quote and confirm a time shortly.
                   </p>
@@ -170,8 +171,8 @@ export default function BookingForm() {
 function Field({ label, icon: Icon, children, className = '' }) {
   return (
     <label className={`flex flex-col gap-2 text-left ${className}`}>
-      <span className="flex items-center gap-1.5 text-sm font-semibold text-charcoal">
-        <Icon size={14} className="text-teal-500" />
+      <span className="flex items-center gap-1.5 text-sm font-semibold text-paper">
+        <Icon size={14} className="text-blue-400" />
         {label}
       </span>
       {children}

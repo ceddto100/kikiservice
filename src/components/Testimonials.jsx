@@ -24,13 +24,13 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-cream py-24 sm:py-28">
+    <section className="bg-night py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
             Kind Words
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
             Loved by hosts and party people alike
           </h2>
         </Reveal>
@@ -38,19 +38,19 @@ export default function Testimonials() {
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {REVIEWS.map((review, i) => (
             <Reveal key={review.name} delay={i * 0.1}>
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7">
-                <Quote className="text-teal-300" size={28} />
-                <div className="mt-4 flex gap-1 text-teal-500">
+              <div className="flex h-full flex-col rounded-2xl border border-edge bg-card p-7 transition-colors duration-300 hover:border-blue-400/40">
+                <Quote className="text-blue-400/60" size={28} />
+                <div className="mt-4 flex gap-1 text-blue-400">
                   {Array.from({ length: 5 }).map((_, idx) => (
-                    <Star key={idx} size={16} className="fill-teal-500" />
+                    <Star key={idx} size={16} className="fill-blue-400" />
                   ))}
                 </div>
-                <p className="mt-4 flex-1 text-stone">&ldquo;{review.quote}&rdquo;</p>
-                <div className="mt-6 border-t border-line pt-4">
-                  <p className="font-display font-semibold text-charcoal">
+                <p className="mt-4 flex-1 text-fog">&ldquo;{review.quote}&rdquo;</p>
+                <div className="mt-6 border-t border-edge pt-4">
+                  <p className="font-display font-semibold text-paper">
                     {review.name}
                   </p>
-                  <p className="text-sm text-stone">{review.role}</p>
+                  <p className="text-sm text-fog">{review.role}</p>
                 </div>
               </div>
             </Reveal>
