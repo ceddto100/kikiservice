@@ -1,8 +1,8 @@
 const VARIANTS = {
   primary:
-    'bg-gradient-to-r from-blue-400 to-blue-600 text-paper shadow-lg shadow-blue-900/40 hover:shadow-blue-500/40 hover:brightness-110',
+    'bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 text-paper shadow-lg shadow-blue-900/40 ring-1 ring-blue-200/20 hover:shadow-blue-500/40 hover:brightness-110',
   ghost:
-    'bg-transparent text-paper border border-edge hover:border-blue-400 hover:text-blue-300 hover:shadow-[0_0_20px_-6px_var(--color-blue-500)]',
+    'bg-white/5 text-paper border border-blue-300/20 backdrop-blur hover:border-blue-400 hover:text-blue-200 hover:bg-blue-500/10 hover:shadow-[0_0_20px_-6px_var(--color-blue-500)]',
   light:
     'bg-paper text-blue-700 hover:bg-blue-50',
 }

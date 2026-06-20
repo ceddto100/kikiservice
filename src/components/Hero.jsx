@@ -4,10 +4,10 @@ import Button from './Button.jsx'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-ink pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="top" className="relative overflow-hidden bg-[radial-gradient(circle_at_72%_18%,rgba(53,99,255,0.28),transparent_32rem),linear-gradient(135deg,#020309_0%,#090b12_48%,#1f2937_100%)] pt-32 pb-20 sm:pt-40 sm:pb-28">
       <div className="absolute inset-0 grid-fade opacity-60" />
-      <div className="drift pointer-events-none absolute -top-32 -right-24 h-[28rem] w-[28rem] rounded-full bg-blue-600/30 blur-3xl" />
-      <div className="drift pointer-events-none absolute top-1/3 -left-40 h-80 w-80 rounded-full bg-blue-500/15 blur-3xl [animation-delay:-4s]" />
+      <div className="orb drift pointer-events-none absolute -top-32 -right-24 h-[30rem] w-[30rem] bg-blue-600/40" />
+      <div className="orb drift pointer-events-none absolute top-1/3 -left-40 h-96 w-96 bg-slate-400/18 [animation-delay:-4s]" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2">
         <motion.div
@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-edge bg-night shadow-2xl shadow-blue-900/30">
+          <div className="vibe-card relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-blue-900/40">
             <img
               src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80"
               alt="Bright, freshly cleaned living room ready for the next guest"

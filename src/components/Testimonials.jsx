@@ -24,7 +24,7 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-night py-24 sm:py-28">
+    <section className="vibe-section py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
@@ -38,7 +38,7 @@ export default function Testimonials() {
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {REVIEWS.map((review, i) => (
             <Reveal key={review.name} delay={i * 0.1}>
-              <div className="flex h-full flex-col rounded-2xl border border-edge bg-card p-7 transition-colors duration-300 hover:border-blue-400/40">
+              <div className="vibe-card flex h-full flex-col rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50">
                 <Quote className="text-blue-400/60" size={28} />
                 <div className="mt-4 flex gap-1 text-blue-400">
                   {Array.from({ length: 5 }).map((_, idx) => (

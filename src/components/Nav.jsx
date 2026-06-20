@@ -25,7 +25,7 @@ export default function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass border-b border-edge shadow-lg shadow-black/40'
+          ? 'glass border-b border-blue-400/20 shadow-lg shadow-black/40'
           : 'bg-transparent'
       }`}
     >
@@ -64,7 +64,7 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-edge bg-ink px-5 pb-6 md:hidden">
+        <div className="glass border-t border-blue-400/20 px-5 pb-6 md:hidden">
           <div className="flex flex-col gap-4 pt-4">
             {LINKS.map((link) => (
               <a

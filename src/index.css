@@ -6,16 +6,16 @@
   --font-sans: "Inter", system-ui, sans-serif;
 
   /* dark base */
-  --color-ink: #060709;
-  --color-night: #0c0e14;
-  --color-card: #12141c;
-  --color-card-soft: #181b25;
-  --color-edge: #232735;
+  --color-ink: #030407;
+  --color-night: #090b12;
+  --color-card: #111520;
+  --color-card-soft: #1a2030;
+  --color-edge: #2d3444;
 
   /* gray text hierarchy */
-  --color-paper: #f3f5f8;
-  --color-fog: #9aa3b5;
-  --color-fog-dim: #686f80;
+  --color-paper: #f5f7fb;
+  --color-fog: #a9b2c4;
+  --color-fog-dim: #737b8c;
 
   /* accent: electric blue */
   --color-blue-50: #eaf1ff;
@@ -34,10 +34,38 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-ink);
+  background:
+    radial-gradient(circle at 18% 8%, color-mix(in srgb, var(--color-blue-600) 24%, transparent) 0 18rem, transparent 34rem),
+    radial-gradient(circle at 88% 2%, color-mix(in srgb, #7f8da8 20%, transparent) 0 15rem, transparent 31rem),
+    linear-gradient(135deg, #020308 0%, var(--color-ink) 42%, #111827 100%);
   color: var(--color-paper);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-paper) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-paper) 4%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.42;
+  background-image: radial-gradient(color-mix(in srgb, var(--color-paper) 18%, transparent) 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+  mix-blend-mode: screen;
 }
 
 ::selection {
@@ -49,12 +77,13 @@ body {
   .form-input {
     width: 100%;
     border-radius: 0.75rem;
-    border: 1px solid var(--color-edge);
-    background: var(--color-night);
+    border: 1px solid color-mix(in srgb, var(--color-edge) 80%, var(--color-blue-400));
+    background: color-mix(in srgb, var(--color-night) 82%, transparent);
     padding: 0.65rem 0.9rem;
     font-size: 0.95rem;
     color: var(--color-paper);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-paper) 5%, transparent);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   }
 
   .form-input::placeholder {
@@ -63,34 +92,63 @@ body {
 
   .form-input:focus {
     outline: none;
-    border-color: var(--color-blue-500);
-    box-shadow: 0 0 0 3px var(--color-blue-900);
+    border-color: var(--color-blue-400);
+    background: color-mix(in srgb, var(--color-night) 92%, transparent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-blue-500) 28%, transparent), 0 0 32px -12px var(--color-blue-500);
   }
 
   .glass {
-    background: color-mix(in srgb, var(--color-ink) 70%, transparent);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--color-ink) 72%, transparent), color-mix(in srgb, var(--color-card-soft) 52%, transparent));
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
   }
 
   .glow-text {
     background: linear-gradient(
       100deg,
-      var(--color-paper) 20%,
-      var(--color-blue-300) 55%,
-      var(--color-paper) 80%
+      var(--color-paper) 8%,
+      var(--color-blue-100) 34%,
+      var(--color-blue-400) 58%,
+      #8f98aa 82%
     );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    filter: drop-shadow(0 0 22px color-mix(in srgb, var(--color-blue-500) 34%, transparent));
   }
 
   .grid-fade {
     background-image:
-      linear-gradient(var(--color-edge) 1px, transparent 1px),
-      linear-gradient(90deg, var(--color-edge) 1px, transparent 1px);
+      linear-gradient(color-mix(in srgb, var(--color-blue-400) 14%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-blue-400) 12%, transparent) 1px, transparent 1px);
     background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 64% 54% at 50% 0%, black 35%, transparent 100%);
+  }
+
+  .orb {
+    border-radius: 9999px;
+    filter: blur(54px);
+    opacity: 0.75;
+    mix-blend-mode: screen;
+  }
+
+  .vibe-section {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 8% 10%, color-mix(in srgb, var(--color-blue-700) 24%, transparent) 0 16rem, transparent 30rem),
+      radial-gradient(circle at 92% 85%, color-mix(in srgb, #9ca3af 12%, transparent) 0 15rem, transparent 28rem),
+      linear-gradient(180deg, color-mix(in srgb, var(--color-night) 86%, transparent), color-mix(in srgb, var(--color-ink) 96%, transparent));
+  }
+
+  .vibe-card {
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--color-edge) 78%, var(--color-blue-400));
+    background:
+      linear-gradient(145deg, color-mix(in srgb, var(--color-card-soft) 82%, transparent), color-mix(in srgb, var(--color-card) 66%, transparent)),
+      radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--color-blue-500) 13%, transparent), transparent 45%);
+    box-shadow: 0 24px 80px -44px color-mix(in srgb, var(--color-blue-500) 55%, transparent), inset 0 1px 0 color-mix(in srgb, var(--color-paper) 7%, transparent);
+    backdrop-filter: blur(14px);
   }
 }
 
@@ -104,8 +162,8 @@ body {
 }
 
 @keyframes drift {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(20px, -24px); }
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -24px) scale(1.06); }
 }
 
 .drift {

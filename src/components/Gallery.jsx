@@ -20,7 +20,7 @@ const ITEMS = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="bg-ink py-24 sm:py-28">
+    <section id="gallery" className="relative overflow-hidden bg-ink py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
@@ -38,7 +38,7 @@ export default function Gallery() {
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((item, i) => (
             <Reveal key={item.label} delay={i * 0.1}>
-              <div className="group overflow-hidden rounded-2xl border border-edge bg-card transition-colors duration-300 hover:border-blue-400/40">
+              <div className="vibe-card group overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50">
                 <div className="grid grid-cols-2">
                   <div className="relative aspect-square overflow-hidden">
                     <img

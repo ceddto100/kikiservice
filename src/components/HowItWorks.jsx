@@ -51,7 +51,7 @@ export default function HowItWorks() {
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <Reveal key={step.title} delay={i * 0.1} className="relative">
-              <div className="flex h-full flex-col rounded-2xl border border-edge bg-card/60 p-6 transition-colors duration-300 hover:border-blue-400/40">
+              <div className="vibe-card flex h-full flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50">
                 <span className="font-display text-sm font-bold text-blue-300">
                   0{i + 1}
                 </span>
