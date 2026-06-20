@@ -27,7 +27,7 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="book" className="vibe-section py-24 sm:py-28">
+    <section id="book" className="hero-section py-24 sm:py-28">
       <div className="drift pointer-events-none absolute -bottom-20 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-blue-600/15 blur-3xl" />
       <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">

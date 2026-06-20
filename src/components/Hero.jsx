@@ -4,7 +4,7 @@ import Button from './Button.jsx'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-[radial-gradient(circle_at_72%_18%,rgba(53,99,255,0.28),transparent_32rem),linear-gradient(135deg,#020309_0%,#090b12_48%,#1f2937_100%)] pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="top" className="hero-section pt-32 pb-20 sm:pt-40 sm:pb-28">
       <div className="absolute inset-0 grid-fade opacity-60" />
       <div className="orb drift pointer-events-none absolute -top-32 -right-24 h-[30rem] w-[30rem] bg-blue-600/40" />
       <div className="orb drift pointer-events-none absolute top-1/3 -left-40 h-96 w-96 bg-slate-400/18 [animation-delay:-4s]" />

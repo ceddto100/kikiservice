@@ -125,6 +125,41 @@ body::after {
     mask-image: radial-gradient(ellipse 64% 54% at 50% 0%, black 35%, transparent 100%);
   }
 
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 72% 18%, rgb(53 99 255 / 0.28), transparent 32rem),
+      radial-gradient(circle at 14% 74%, rgb(148 163 184 / 0.16), transparent 28rem),
+      linear-gradient(135deg, #020309 0%, var(--color-night) 48%, #1f2937 100%);
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--color-blue-400) 14%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-blue-400) 12%, transparent) 1px, transparent 1px);
+    background-size: 56px 56px;
+    opacity: 0.38;
+    mask-image: radial-gradient(ellipse 64% 54% at 50% 0%, black 35%, transparent 100%);
+  }
+
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    inset: auto -12rem -18rem auto;
+    width: 34rem;
+    height: 34rem;
+    pointer-events: none;
+    border-radius: 9999px;
+    background: rgb(53 99 255 / 0.18);
+    filter: blur(72px);
+    mix-blend-mode: screen;
+  }
+
   .orb {
     border-radius: 9999px;
     filter: blur(54px);
