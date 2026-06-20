@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-cream: #faf8f5;
+  --color-charcoal: #1c1b1a;
+  --color-charcoal-soft: #2b2a28;
+  --color-stone: #6f6a63;
+  --color-stone-light: #a8a39a;
+  --color-line: #e7e2da;
+
+  --color-teal-50: #eef7f6;
+  --color-teal-100: #d3ece8;
+  --color-teal-300: #7cc4ba;
+  --color-teal-500: #1f6f66;
+  --color-teal-600: #195a53;
+  --color-teal-700: #134640;
+  --color-teal-900: #0a2825;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-teal-300);
+  color: var(--color-teal-900);
+}
+
+@layer components {
+  .form-input {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-cream);
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    color: var(--color-charcoal);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-teal-500);
+    box-shadow: 0 0 0 3px var(--color-teal-100);
+  }
+}
