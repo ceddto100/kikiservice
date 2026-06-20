@@ -41,7 +41,7 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="vibe-section py-24 sm:py-28">
+    <section id="services" className="hero-section py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">

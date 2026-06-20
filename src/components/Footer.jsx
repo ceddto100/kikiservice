@@ -25,7 +25,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-edge bg-black text-paper/80">
+    <footer className="hero-section border-t border-edge text-paper/80">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/60 to-transparent" />
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

@@ -30,7 +30,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative overflow-hidden bg-gradient-to-b from-ink via-blue-900/30 to-ink py-24 text-paper sm:py-28">
+    <section id="how-it-works" className="hero-section py-24 text-paper sm:py-28">
       <div className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
       <div className="drift pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-500/15 blur-3xl" />
 
