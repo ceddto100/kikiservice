@@ -41,7 +41,7 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative bg-night py-24 sm:py-28">
+    <section id="services" className="vibe-section py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
@@ -59,7 +59,7 @@ export default function Services() {
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={i * 0.1}>
-              <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-edge bg-card transition-all duration-300 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-900/20">
+              <div className="vibe-card group flex h-full flex-col overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-900/30">
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={service.image}

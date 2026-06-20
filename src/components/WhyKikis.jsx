@@ -26,7 +26,7 @@ const BADGES = [
 
 export default function WhyKikis() {
   return (
-    <section className="bg-night py-24 sm:py-28">
+    <section className="vibe-section py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
@@ -40,7 +40,7 @@ export default function WhyKikis() {
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {BADGES.map((badge, i) => (
             <Reveal key={badge.title} delay={i * 0.08}>
-              <div className="group h-full rounded-2xl border border-edge bg-card p-7 text-center transition-all duration-300 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-900/20">
+              <div className="vibe-card group h-full rounded-2xl p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-900/30">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/10 text-blue-300 transition-shadow duration-300 group-hover:shadow-[0_0_20px_-4px_var(--color-blue-500)]">
                   <badge.icon size={24} />
                 </div>

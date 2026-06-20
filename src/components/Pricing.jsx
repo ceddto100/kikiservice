@@ -48,7 +48,7 @@ const TIERS = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-ink py-24 sm:py-28">
+    <section id="pricing" className="relative overflow-hidden bg-ink py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
@@ -70,7 +70,7 @@ export default function Pricing() {
                 className={`flex h-full flex-col rounded-3xl p-8 ${
                   tier.highlight
                     ? 'bg-gradient-to-b from-blue-500 to-blue-700 text-paper shadow-2xl shadow-blue-500/30 ring-1 ring-blue-300/40 lg:-translate-y-3'
-                    : 'border border-edge bg-card text-paper'
+                    : 'vibe-card text-paper'
                 }`}
               >
                 {tier.highlight && (
